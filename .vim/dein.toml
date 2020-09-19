@@ -1,0 +1,10 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+
+[[plugins]]
+repo = 'zerowidth/vim-copy-as-rtf'
+
+
