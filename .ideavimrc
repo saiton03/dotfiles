@@ -1,0 +1,55 @@
+" setting
+" 見た目系
+" 折り返し時に表示行単位での移動できるようにする
+nnoremap j gj
+nnoremap k gk
+" シンタックスハイライトの有効化
+syntax enable
+" 対応する括弧やブレースを表示
+set showmatch matchtime=1
+" メッセージ表示欄を2行確保
+set cmdheight=2
+" ステータス行を常に表示
+set laststatus=2
+" ウィンドウの右下にまだ実行していない入力中のコマンドを表示
+set showcmd
+" 省略されずに表示
+set display=lastline
+" ヤンクでクリップボードにコピー
+set clipboard+=unnamed
+" 対応する括弧を強調表示
+set showmatch
+" Escの2回押しでハイライト消去
+nnoremap <Esc><Esc> :nohlsearch<CR><ESC>
+" 行をまたいで移動
+set whichwrap=b,s,h,l,<,>,[,],~
+" インデント方法の変更
+set cinoptions+=:0
+" インデント幅
+set shiftwidth=2
+" タブキー押下時に挿入される文字幅を指定
+set softtabstop=2
+
+" 検索系
+" 検索文字列が小文字の場合は大文字小文字を区別なく検索する
+set ignorecase
+" 検索文字列に大文字が含まれている場合は区別して検索する
+set smartcase
+" 検索文字列入力時に順次対象文字列にヒットさせる
+set incsearch
+" 検索時に最後まで行ったら最初に戻る
+set wrapscan
+" 検索語をハイライト表示
+set hlsearch
+" ESC連打でハイライト解除
+nmap <Esc><Esc> :nohlsearch<CR><Esc>`
+
+" jj でescを抜ける
+inoremap <silent> jj <ESC>
+inoremap <silent> っj <ESC>
+
+" ctrl hjklで操作
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <left>
+inoremap <C-l> <right>
