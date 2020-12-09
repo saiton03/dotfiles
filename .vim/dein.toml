@@ -5,9 +5,6 @@ repo = 'Shougo/dein.vim'
 repo = 'easymotion/vim-easymotion'
 
 [[plugins]]
-repo = 'zerowidth/vim-copy-as-rtf'
-
-[[plugins]]
 repo = 'fatih/vim-go'
 
 [[plugins]]

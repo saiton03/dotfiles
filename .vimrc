@@ -30,6 +30,7 @@ endif
 if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
+call map(dein#check_clean(), "delete(v:val, 'rf')")
 " }}}
 
 " setting
@@ -73,8 +74,6 @@ syntax enable
 
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
-set list listchars=tab:\▸\-
-" 行頭以外のTab文字の表示幅（スペースいくつ分）
 set tabstop=2
 " 行頭でのTab文字の表示幅
 set shiftwidth=4
