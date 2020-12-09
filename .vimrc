@@ -30,6 +30,7 @@ endif
 if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
+call map(dein#check_clean(), "delete(v:val, 'rf')")
 " }}}
 
 " setting
@@ -81,7 +82,7 @@ set shiftwidth=4
 " Tab文字を半角スペースにする(makefile対応版
 set expandtab
 let _curfile=expand("%:r")
-if _curfile == 'makefile' 
+if _curfile == 'Makefile' 
   set noexpandtab
 endif
 

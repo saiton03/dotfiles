@@ -79,3 +79,4 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/binutils/bin
 
 export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
