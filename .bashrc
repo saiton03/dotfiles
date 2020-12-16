@@ -80,51 +80,8 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-_ps1_green="\e[32m"
-_ps1_blue="\e[34m"
-_ps1_reset="\e[00m"
-
-# add kaomoji
-function _ps1_result() {
-    if [ $? -eq 0 ]; then
-        #face="\e[32m(*^-^)"
-        #face='(*^-^)']
-        echo -e "${_ps1_green}"'(*^-^)'"${_ps1_reset}"
-    else
-        #face="\e[34m(*;-;)"
-        #face='(*;-;)'
-        echo -e "${_ps1_blue}"'(*;-;)'"${_ps1_reset}"
-    fi
-}
-function _face() {
-    if [ $? -eq 0 ]; then
-        #face="\e[32m(*^-^)"
-        #face='(*^-^)']
-        echo -e '(*^-^)'
-    else
-        #face="\e[34m(*;-;)"
-        #face='(*;-;)'
-        echo -e '(*;-;)'
-    fi
-}
-
-function check-color() {
-    if [ $? -eq 0 ]; then
-        #face="\e[32m(*^-^)"
-        code='32'
-    else
-        #face="\e[34m(*;-;)"
-        code='34'
-    fi
-    #echo -e "${face}\e[m"
-    echo -e "${code}"
-    
-}
-
 if [ "$color_prompt" = yes ]; then
-    #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    #PS1='${debian_chroot:+($debian_chroot)}$(_ps1_result)\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-    PS1='${debian_chroot:+($debian_chroot)}\[\e[01;$(check-color)m\]$(_face)\[\e[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\e[01;$([ $? = 0 ] && echo -e 32m\]\(*^-^\) || echo -e 34m\]\(*\;-\;\))\[\e[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
