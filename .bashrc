@@ -116,6 +116,19 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+_source_file () {
+  if [[ $# -lt 1 ]];then
+    echo "ERROR!!! Usage: _source_file <file>"
+    return
+  fi
+  file="$1"
+  if [[ -r "$file" ]]; then
+    source "$file"
+  fi
+}
+
+_source_file ~/.localrc
+
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
