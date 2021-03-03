@@ -9,14 +9,14 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/kenta/.pyenv/versions/anaconda3-5.3.1/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/kenta/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/kenta/.pyenv/versions/anaconda3-5.3.1/etc/profile.d/conda.sh" ]; then
-        . "/home/kenta/.pyenv/versions/anaconda3-5.3.1/etc/profile.d/conda.sh"
+    if [ -f "/home/kenta/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/kenta/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/kenta/.pyenv/versions/anaconda3-5.3.1/bin:$PATH"
+        export PATH="/home/kenta/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
