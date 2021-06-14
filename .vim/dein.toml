@@ -18,8 +18,8 @@ repo = 'prabirshrestha/asyncomplete-lsp.vim'
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
 hook_add = '''
-    nmap <silent> gd :LspDefinition<CR>
-    nmap <silent> gtd :tab LspDefinition<CR>
+    nmap <silent> gdn :LspDefinition<CR>
+    nmap <silent> gdt :tab LspDefinition<CR>
     nmap <silent> <f2> :LspRename<CR>
     nmap <silent> <Leader>d :LspTypeDefinition<CR>
     nmap <silent> <Leader>r :LspReferences<CR>
@@ -27,10 +27,16 @@ hook_add = '''
     let g:lsp_diagnostics_enabled = 1
     let g:lsp_diagnostics_echo_cursor = 1
     let g:asyncomplete_popup_delay = 200
-    let g:lsp_text_edit_enabled = 0
+    let g:lsp_text_edit_enabled = 1
 '''
 [[plugins]]
 repo = 'mattn/vim-goimports'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  nnoremap <silent><C-t> :NERDTreeToggle<CR>
+'''
 
 [[plugins]]
 repo = 'tomasr/molokai'
@@ -40,4 +46,20 @@ hook_add = '''
 
   colorscheme molokai
 '''
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'ryanoasis/nerd-fonts'
 
