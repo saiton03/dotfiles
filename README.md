@@ -11,3 +11,5 @@ masterブランチ以外にlinux, macがあるので、適切なものをチェ�
 ./install.sh
 ```
 
+nerd-fontsを使用する場合は'Droid Sans Nerd Font Complete'をターミナルを使用しているマシンにインストールする。
+
