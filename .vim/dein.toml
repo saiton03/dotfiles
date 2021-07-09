@@ -57,6 +57,3 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
 
-[[plugins]]
-repo = 'ryanoasis/nerd-fonts'
-
