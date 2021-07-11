@@ -84,3 +84,7 @@ export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 # zsh-completions
 autoload -Uz compinit
 compinit
+
+# ls colors
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
