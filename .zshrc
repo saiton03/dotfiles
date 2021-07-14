@@ -66,10 +66,6 @@ export CPLUS_INCLUDE_PATH="/usr/local/Cellar/boost/1.73.0/include"
 #pkg-config
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 
-# obs-studio
-export QTDIR=/usr/local/opt/qt
-export OBS_DIR=/Users/saiton03/Downloads/obs-studio
-
 # golang
 export PATH="$PATH:/home/saiton03/go/bin"
 export GOPATH=$HOME/go/
