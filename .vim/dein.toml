@@ -21,11 +21,27 @@ hook_add = '''
     nmap <silent> <Leader>d :LspTypeDefinition<CR>
     nmap <silent> <Leader>r :LspReferences<CR>
     nmap <silent> <Leader>i :LspImplementation<CR>
+    nmap <silent> <Leader>f :LspDocumentFormat<CR>
     let g:lsp_diagnostics_enabled = 1
     let g:lsp_diagnostics_echo_cursor = 1
     let g:asyncomplete_popup_delay = 200
     let g:lsp_text_edit_enabled = 1
+    let g:lsp_settings = {
+    \    'pyls-all': {
+    \       'workspace_config': {
+    \           'pyls': {
+    \               'configurationSources': ['flake8'],
+    \               'plugins': {
+    \                    'flake8': {'enabled': v:true},
+    \                    'pyflakes': {'enabled': v:false},
+    \                    'pycodestyle': {'enabled': v:false},
+    \               }
+    \           }
+    \       }
+    \   },
+    \}
 '''
+
 [[plugins]]
 repo = 'mattn/vim-goimports'
 
