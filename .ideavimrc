@@ -54,7 +54,3 @@ inoremap <C-k> <Up>
 inoremap <C-h> <left>
 inoremap <C-l> <right>
 
-let mapleader=" "
-set easymotion
-nmap s <Plug>(easymotion-s2)
-
